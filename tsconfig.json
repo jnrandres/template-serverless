@@ -1,0 +1,61 @@
+// {
+//   "$schema": "https://json.schemastore.org/tsconfig",
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "module": "es2022",
+//     "target": "es2022",
+//     "moduleResolution": "Bundler",
+//     "esModuleInterop": true,
+//     "strict": true,
+//     "outDir": "dist",
+//     "sourceMap": true,
+//     "inlineSources": true,
+//     "skipLibCheck": true,
+//     "resolveJsonModule": true,
+//     "paths": {
+//       "@/src/*": ["src/*"],
+//       // "@/app/*": ["src/app/*"],
+//       "@/modules/*": ["src/modules/*"],
+//       "@/middlewares/*": ["src/middlewares/*"],
+//       // "@/contexts/*": ["src/contexts/*"],
+//       // "@/shared/*": ["src/contexts/shared/*"],
+//       "@/tests/*": ["tests/*"]
+//     },
+//   },
+//   "exclude": [
+//     "node_modules", 
+//     "dist/**/*",
+//   ]
+// }
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2020",
+    "module": "es2020",
+    "declaration": true,
+    "sourceMap": true,
+    "composite": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@/src/*": ["src/*"],
+      // "@/app/*": ["src/app/*"],
+      "@/modules/*": ["src/modules/*"],
+      "@/middlewares/*": ["src/middlewares/*"],
+      // "@/contexts/*": ["src/contexts/*"],
+      // "@/shared/*": ["src/contexts/shared/*"],
+      "@/tests/*": ["tests/*"]
+    },
+  },
+  "include": ["src/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "template-one",
+  "version": "1.0.0",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "sls package",
+    "deploy": "sls deploy",
+    "start": "sls offline start --reloadHandler"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.143",
+    "aws-lambda": "^1.0.7",
+    "serverless": "^4.1.19",
+    "serverless-offline": "^14.0.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@middy/core": "^4.7.0",
+    "@middy/http-router": "^4.7.0"
+  }
+}

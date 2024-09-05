@@ -1,0 +1,51 @@
+service: jnns-lambda-template
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${opt:stage,'development'}
+  region: us-east-1
+  timeout: 30
+  memorySize: 2048
+  tracing:
+    lambda: true
+
+  environment:
+    NODE_ENV: ${opt:stage,'development'}
+
+functions:
+
+  users:
+    handler: src/handler/users/index.handler
+    events:
+      - http:
+          path: /users
+          method: post
+      - http:
+          path: /users
+          method: get
+      - http:
+          path: /users/{id}
+          method: get
+      - http:
+          path: /users/{id}
+          method: put
+      - http:
+          path: /users/{id}
+          method: delete
+
+plugins:
+  - serverless-offline
+
+build:
+  esbuild:
+    bundle: true
+    minify: false
+    exclude:
+      - "@aws-sdk/*"
+      - "!@aws-sdk/client-bedrock-runtime"
+    packages: external
+    buildConcurrency: 3
+    sourcemap:
+      type: linked
+      setNodeOptions: true

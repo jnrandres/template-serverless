@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.serverless/
+.tmp
+.idea
+.env
+coverage/
+.npm
+.vscode
+.nyc_output
+k6-results
+undefined
